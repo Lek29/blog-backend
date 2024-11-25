@@ -1,10 +1,13 @@
 import os
+
+
 from environs import Env
 
 env = Env()
 env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 COMPANY_COORDINATES = [55.751244, 37.618423]
 
@@ -92,9 +95,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = os.getenv('STATIC_URL', '/static/')
+# STATIC_URL = os.getenv('STATIC_URL', '/static/')
+STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 MEDIA_ROOT = os.getenv("MEDIA_ROOT", os.path.join(BASE_DIR, 'media'))
 
