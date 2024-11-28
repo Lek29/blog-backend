@@ -56,5 +56,41 @@
           </div>
         </section>
         <!--================Hero Banner end =================-->
-  
+        <main class="site-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="single-recent-blog-post">
+                            <div class="thumb">
+                                {% if post.image_url %}
+                                    <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
+                                {% else %}
+                                    <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="{{ post.title }}">
+                                {% endif %}
+                                <ul class="thumb-info">
+                                    
+                                </ul>
+                            </div>
+                            <div>
+                                <h1>{{ post.title }}</h1>
+                                <br>
+                                <p><strong>{{ post.author }}</strong>
+                                <p>{{ post.published_at }}</p>
+                                <br>
+                                <p>{{ post.text }}</p>
+                            </div>
+                            <i class="ti-themify-favicon"> {{post.likes_amount}} comments</i><br><br>
+                            
+                            <div class="comment">
+                                {% for comments in post.comments %}
+                                    <p style="font-size: 18px;  margin-bottom: 1px;"><strong>{{comments.author}}</strong></p>
+                                    <p style="font-size: 20px;">{{comments.published_at}}</p>
+                                    <p style="font-size: 30px;">{{comments.text}}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
   </body>
