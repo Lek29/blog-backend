@@ -79,15 +79,19 @@
                                 <br>
                                 <p>{{ post.text }}</p>
                             </div>
-                            <i class="ti-themify-favicon"> {{post.likes_amount}} comments</i><br><br>
+                            <i class="ti-themify-favicon"> {{post.comments|length}} comments</i><br><br>
+
                             
-                            <div class="comment">
-                                {% for comments in post.comments %}
-                                    <p style="font-size: 18px;  margin-bottom: 1px;"><strong>{{comments.author}}</strong></p>
-                                    <p style="font-size: 20px;">{{comments.published_at}}</p>
-                                    <p style="font-size: 30px;">{{comments.text}}</p>
-                                {% endfor %}
-                            </div>
+                            <div class="comment-form">
+                              <p class="comment-count"><strong>{{ post.comments|length }} comments</strong></p> 
+                              {% for comment in post.comments %}
+                                  <div class="comment-list">
+                                      <p class="comment-author"><strong>{{ comment.author }}</strong></p>
+                                      <p class="comment-date">{{ comment.published_at }}</p>
+                                      <p class="comment-text">{{ comment.text }}</p>
+                                  </div>
+                              {% endfor %}
+                          </div>
                         </div>
                     </div>
                 </div>
