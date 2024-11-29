@@ -79,8 +79,9 @@
                                 <br>
                                 <p>{{ post.text }}</p>
                             </div>
+                            <i class="ti-heart" style="color: red;"> </i> {{ post.likes_amount }} likes &nbsp;&nbsp;
                             <i class="ti-themify-favicon"> {{post.comments|length}} comments</i><br><br>
-
+                            
                             
                             <div class="comment-form">
                               <p class="comment-count"><strong>{{ post.comments|length }} comments</strong></p> 
