@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block title %}{{ post.title}} - Block Details{% endblock%}
+
 {% block content %}
     <main class="site-main">
         <!--================Hero Banner start =================-->
@@ -24,11 +25,11 @@
                     <div class="col-lg-8">
                         <div class="single-recent-blog-post">
                             <div class="thumb">
-                                {% if post.image_url %}
-                                    <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
-                                {% else %}
-                                    <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="{{ post.title }}">
-                                {% endif %}
+                              {% if post.image_url %}
+                                <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
+                              {% else %}
+                                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="{{ post.title }}">
+                              {% endif %}
                                 <ul class="thumb-info">
                                     
                                 </ul>
