@@ -138,3 +138,5 @@ dmypy.json
 cython_debug/
 media/
 venv_3.10
+.idea/
+.gitkeep
