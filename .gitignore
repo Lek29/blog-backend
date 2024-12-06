@@ -140,3 +140,4 @@ media/
 venv_3.10
 .idea/
 .gitkeep
+new_venv/

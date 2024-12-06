@@ -1,12 +1,10 @@
 {
 	"folders": [
 		{
-			"name": "blog-backend",
 			"path": ".."
 		},
 		{
-			"name": "media",
-			"path": "../../../../Users/Lekantras/Downloads/Лиза бэк/media"
+			"path": "../../../../Downloads/лиза бек/media"
 		}
 	],
 	"settings": {}
