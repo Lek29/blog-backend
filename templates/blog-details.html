@@ -46,13 +46,13 @@
             <i class="ti-themify-favicon"> {{post.comments|length}} comments</i><br><br>
             <div class="comment-form">
               <p class="comment-count"><strong>{{ post.comments|length }} comments</strong></p>
-                {% for comment in post.comments %}
-                  <div class="comment-list">
-                    <p class="comment-author"><strong>{{ comment.author }}</strong></p>
-                    <p class="comment-date">{{ comment.published_at }}</p>
-                    <p class="comment-text">{{ comment.text }}</p>
-                  </div>
-                {% endfor %}
+              {% for comment in post.comments %}
+                <div class="comment-list">
+                  <p class="comment-author"><strong>{{ comment.author }}</strong></p>
+                  <p class="comment-date">{{ comment.published_at }}</p>
+                  <p class="comment-text">{{ comment.text }}</p>
+                </div>
+              {% endfor %}
             </div>
           </div>
         </div>
